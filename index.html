@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Special Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css"> <!-- Link to CSS -->
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+
+  <div id="winter-scene">
+    <div id="birthday-wish">
+      <h1>HAPPY BIRTHDAY</h1>
+      <p>to my almost husband ❤️</p>
+    </div>
+    
+    <div id="cake">
+      <img id="frosting-layer" src="images/frosting.png" alt="Frosting Topping"> <!-- Frosting image on top of the cake -->
+ 
+      <div class="snowy-layer"></div>
+      <div class="cream-layer"></div>
+      <div class="candles">
+        <div class="candle lit" onclick="blowOutCandle(this)"></div>
+        <div class="candle lit" onclick="blowOutCandle(this)"></div>
+        <div class="candle lit" onclick="blowOutCandle(this)"></div>
+      </div>
+    </div>
+    
+
+    <!-- Hidden message section -->
+    <div id="story">
+      <p id="hidden-message"></p> <!-- Initially hidden -->
+    </div>
+    
+    <!-- Embed the audio player below the cake -->
+    <audio id="birthday-song" controls autoplay loop>
+  <source src="audioes/happy-birthday.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+    </audio>
+    
+    
+  </div>
+
+  <script src="script.js"></script> <!-- Link to JavaScript -->
+</body>
+</html>

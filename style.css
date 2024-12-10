@@ -1,0 +1,239 @@
+/* Winter scene styling */
+#winter-scene {
+  background: linear-gradient(to bottom, #071952, #EBF4F6);
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Birthday wish styling */
+#birthday-wish h1 {
+  font-family: 'Press Start 2P', cursive; 
+  font-size: 2.2em;
+  color: #fff;
+  margin-bottom: -5px;
+ /* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
+}
+
+#birthday-wish p {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.8em;
+  color: #fff;
+  margin-bottom: 90px;
+  /*text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);*/
+}
+
+/* Cake container and styling */
+#cake-container {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+#cake {
+  width: 250px;
+  height: 150px;
+  background: #FFD09B;
+  border-bottom: 9px solid #FFF7D1;
+  border-radius: 10px;
+  position: relative;
+  animation: slideIn 1.8s ease-out forwards;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 3px solid #fff;
+box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.6); /* Glowing cake */
+
+}
+
+#frosting-layer {
+  position: absolute;
+  top: -1px; /* Adjust this to fit the cake's top */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 250px; /* Match the width of the cake */
+  border-top-left-radius: 5%; /* Round the top left corner */
+border-top-right-radius: 5%; /* Round the top right corner */
+border-bottom-left-radius: 0; /* Keep bottom corners square */
+border-bottom-right-radius: 0; /* Keep bottom corners square */
+  pointer-events: none; /* Ensures the frosting doesn't interfere with clicks */
+}
+
+.snowy-layer {
+  height: 45px;
+  background-color: #FFD09B;
+  border-top: 9px solid #FFF7D1;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+}
+.cream-layer {
+  height: 10px;
+  background-color: #FFF7D1;
+  border-top: 45px solid #FFD09B;
+  border-top-left-radius:10px ;
+  border-top-right-radius:10px ;
+
+  bottom: 0;
+  width: 100%;
+}
+  /* Candle styling */
+  .candles {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+/* Realistic Candle */
+
+.candle {
+  width: 12px;
+  height: 50px;
+  background-color: #ffd700;
+
+  margin: 0 10px;
+  border-radius: 25%;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0 5px 10px rgba(176, 78, 78, 0.3);
+  cursor: pointer; /* Cursor change to indicate interactivity */
+}
+
+.lit::before {
+  content: '';
+  width: 18px;
+  height: 35px;
+  background: radial-gradient(circle at 50% 25%, rgba(255,165,0,0.8), rgba(255,69,0,0.6), rgba(255,140,0,0.1)); 
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  animation: flicker 0.2s infinite alternate;
+  filter: blur(2px); /* Slight blur for a soft glow effect */
+  transition: background-color 0.5s ease-out; /* Smooth transition */
+  
+
+}
+  /* Candle base */
+.candle::after {
+content: '';
+width: 6px;
+height: 15px;
+background-color: #ffeb3b; /* Slightly lighter yellow for the wick */
+position: absolute;
+top: -15px;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 50%;
+
+}
+
+
+
+/* Blown-out candles (No flame) */
+.blown-out::before {
+  
+  background-color: transparent;/* Remove flame */
+  animation: none;/* Stop flickering */
+  transition: background-color 0.5s ease-out; /* Smooth transition */
+}
+
+/* Hide candle base when blown out */
+.blown-out::after {
+display: none; /* Hide the candle base */
+}
+
+/* Story and hidden message styling */
+#story {
+  display: none; /* Hidden initially */
+  text-align: center;
+  margin-top: 30px;
+}
+
+#hidden-message {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.6em;
+  color: #ffffff;
+  margin-top: 20px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  margin: 0 auto;
+}
+/* Confetti burst effect */
+.confetti-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+}
+
+.confetti {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: #fff;
+  border-radius: 50%;
+  animation: fall 4s ease-in-out infinite;
+}
+
+/* Adjusted audio player position */
+#audio-player {
+  margin-top: 40px; /* Added margin to push the audio player below the cake */
+}
+
+/* Typewriter animation for message reveal */
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+/* Animation for flickering candle flames */
+/*@keyframes flicker {
+  0% { opacity: 0.7; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.2); }
+}
+*/
+/* Flickering flame animation */
+@keyframes flicker {
+0% {
+  transform: translateX(-50%) scale(1.05);
+  opacity: 0.85;
+}
+100% {
+  transform: translateX(-50%) scale(0.95);
+  opacity: 1;
+}
+}
+
+/* Animation for cake slide-in */
+@keyframes slideIn {
+  from { transform: translateY(300%); }
+  to { transform: translateY(0); }
+}
+
+/* Snowflake styles */
+.snowflake {
+  position: absolute;
+  top: -10px;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+  to { transform: translateY(100vh); }
+}
+
+/* Story fade-in effect */
+.fadeIn {
+  opacity: 1 !important;
+}
