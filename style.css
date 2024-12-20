@@ -131,6 +131,9 @@ transform: translateX(-50%);
 border-radius: 50%;
 
 }
+.candle.lit {
+  box-shadow: 0 0 15px 5px rgba(255, 223, 0, 0.5);
+}
 
 
 
@@ -163,6 +166,27 @@ display: none; /* Hide the candle base */
   max-width: 80%;
   margin: 0 auto;
 }
+
+#notification {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
+  animation: fadeInOut 4s infinite; /* Blinking effect */
+  z-index: 10;
+}
+
+@keyframes fadeInOut {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 /* Confetti burst effect */
 .confetti-container {
   position: absolute;
@@ -177,7 +201,7 @@ display: none; /* Hide the candle base */
   position: absolute;
   width: 8px;
   height: 8px;
-  background-color: #fff;
+  background-color: hsl(calc(360 * var(--color)), 100%, 70%);
   border-radius: 50%;
   animation: fall 4s ease-in-out infinite;
 }
