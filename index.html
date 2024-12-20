@@ -16,7 +16,9 @@
       <h1>HAPPY BIRTHDAY</h1>
       <p>to my almost husband ❤️</p>
     </div>
-    
+   
+         
+
     <div id="cake">
       <img id="frosting-layer" src="images/frosting.png" alt="Frosting Topping"> <!-- Frosting image on top of the cake -->
  
@@ -28,6 +30,11 @@
         <div class="candle lit" onclick="blowOutCandle(this)"></div>
       </div>
     </div>
+    <!-- Embed the audio player below the cake -->
+<audio id="birthday-song" controls autoplay loop>
+  <source src="audioes/happy-birthday.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+    </audio>
     
 
     <!-- Hidden message section -->
@@ -35,14 +42,13 @@
       <p id="hidden-message"></p> <!-- Initially hidden -->
     </div>
     
-    <!-- Embed the audio player below the cake -->
-    <audio id="birthday-song" controls autoplay loop>
-  <source src="audioes/happy-birthday.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-    </audio>
     
     
   </div>
+  <div id="notification">
+    Click on the candles to blow them out!
+  </div>
+  
 
   <script src="script.js"></script> <!-- Link to JavaScript -->
 </body>
